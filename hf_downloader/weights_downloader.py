@@ -20,12 +20,14 @@ def download_model(url, output_file):
             progress = downloaded / total_length * 100
             print(f'\rDownloaded {downloaded}/{total_length} bytes ({progress:.2f}%)', end='')
 
+
 # 定义下载列表
 models = {
     'gpt2': 'https://cdn.huggingface.co/gpt2-pytorch_model.bin',
     'bert-base-uncased': 'https://cdn.huggingface.co/bert-base-uncased-pytorch_model.bin',
     'pangu_2_6B': 'https://cdn.huggingface.co/pangu-2_6B-pytorch_model.bin'
 }
+
 
 # 定义多线程函数
 def run_threads():
@@ -42,6 +44,7 @@ def run_threads():
         t.start()
     for thread in threads:
         thread.join()
+
 
 if __name__ == '__main__':
     run_threads()
