@@ -1,6 +1,8 @@
 __init__ = ["git_repo_dict"]
 
 # 这个字典包含了git_repo模型，通过spider_hf_repo.py脚本爬取,可直接用于git clone repo
+# usage ->> git clone https://huggingface.co/facebook/bart-base
+# 当前仅生成前100页的数据，共2986条
 git_repo_dict = {
     "biobert_huner_disease_v1": "https://huggingface.co/aitslab/biobert_huner_disease_v1",
     "albert-base-chinese-cluecorpussmall": "https://huggingface.co/uer/albert-base-chinese-cluecorpussmall",
