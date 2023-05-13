@@ -5,6 +5,7 @@ import requests
 def download_model(url, output_file):
     """Download a model from Huggingface and save it to disk"""
     """从Huggingface下载模型并将其保存到磁盘"""
+    downloaded = 0
     with open(output_file, 'wb') as f:
         response = requests.get(url, stream=True)
         total_length = response.headers.get('content-length')
@@ -24,8 +25,7 @@ def download_model(url, output_file):
 # 定义下载列表
 models = {
     'gpt2': 'https://cdn.huggingface.co/gpt2-pytorch_model.bin',
-    'bert-base-uncased': 'https://cdn.huggingface.co/bert-base-uncased-pytorch_model.bin',
-    'pangu_2_6B': 'https://cdn.huggingface.co/pangu-2_6B-pytorch_model.bin'
+    'bert-base-uncased': 'https://cdn.huggingface.co/bert-base-uncased-pytorch_model.bin'
 }
 
 
