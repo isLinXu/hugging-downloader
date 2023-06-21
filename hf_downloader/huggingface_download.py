@@ -117,8 +117,5 @@ if __name__ == '__main__':
     parser.add_argument('--tqdm-class', type=str, default=None, help='Custom tqdm class to use for the progress bars')
     args = parser.parse_args()
 
-    args.repo_id = 'prajjwal1/bert-tiny'
-    args.cache_dir = '../cache'
-    args.local_dir = '../downloads'
     downloader = HuggingFaceDownloader(args)
     downloader.download_repo_from_hf(args.repo_id)
