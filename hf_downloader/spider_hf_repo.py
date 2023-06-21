@@ -2,12 +2,13 @@ import requests
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 
-
+import json
+import os
 def get_hf_repo_dict(url_template="https://huggingface.co/models?p={}&sort=downloads", pages=100):
 
     all_links = []
     #! total pages = 6446
-    for i in range(0, pages):
+    for i in tqdm(range(0, pages)):
         # 访问网页
         if i == 0:
             url = "https://huggingface.co/models?sort=downloads"
@@ -37,7 +38,8 @@ def get_hf_repo_dict(url_template="https://huggingface.co/models?p={}&sort=downl
     print("len(all_links): ", len(all_links))
 
     model_dict = {}
-    for link in all_links:
+    for i in tqdm(range(len(all_links))):
+        link = all_links[i]
         # print("link: ", link)
         model_name = link.split("/")[-1]
         # print("model_name: ", model_name)
@@ -46,8 +48,13 @@ def get_hf_repo_dict(url_template="https://huggingface.co/models?p={}&sort=downl
     # model_list = list(model_dict)
     # print("model_list: ", model_list)
 
+    modeling_dict = {}
     for (key, value) in model_dict.items():
         print('"'+key+'"' + ':' + '"'+value+'"', end=",\n")
+        modeling_dict[key] = value
+    # 将字典保存为 JSON 文件
+    with open("models.json", "w") as json_file:
+        json.dump(modeling_dict, json_file)
     return model_dict
 
 
