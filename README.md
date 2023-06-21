@@ -14,7 +14,21 @@ or
 pip install git+https://github.com/huggingface/transformers
 ```
 
-## Usage1: Download models from huggingface
+# Usage: 
+
+## spider and request model from huggingface
+
+```shell
+python hf_downloader/spider_hf_downloader.py 
+```
+<div style="text-align:center;">   <img src="https://user-images.githubusercontent.com/59380685/247611154-380ac3eb-07e7-4e5e-be5c-b5b9a11b320f.png" alt="image" style="max-width:60%;max-height:100%;" /> </div>
+
+<div style="text-align:center;">   <img src="https://user-images.githubusercontent.com/59380685/247611366-013142ef-f4e0-4375-8eed-baedb99b6d9f.png" alt="image" style="max-width:60%;max-height:100%;" /> </div>
+
+<div style="text-align:center;">   <img src="https://user-images.githubusercontent.com/59380685/247611887-12a9df58-0db6-4c4d-8ef4-99a95d26948a.png" alt="image" style="max-width:60%;max-height:100%;" /> </div>
+
+
+## Download models from huggingface
 
 ```shell
 python hf_downloader/huggingface_download.py --repo-id prajjwal1/bert-tiny --cache-dir ../cache --local-dir ../bert-tiny
