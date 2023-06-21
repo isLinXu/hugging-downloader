@@ -1,9 +1,8 @@
 # hugging-downloader
-hugging-face-downloader
 
 ---
 
-
+![GitHub stars](https://img.shields.io/github/stars/isLinXu/hugging-downloader)![GitHub forks](https://img.shields.io/github/forks/isLinXu/hugging-downloader) ![GitHub watchers](https://img.shields.io/github/watchers/isLinXu/hugging-downloader) [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fatrox%2Fsync-dotenv%2Fbadge&style=flat)](https://github.com/isLinXu/hugging-downloader)  ![img](https://badgen.net/badge/icon/learning?icon=deepscan&label)![GitHub repo size](https://img.shields.io/github/repo-size/isLinXu/hugging-downloader.svg?style=flat-square) ![GitHub language count(https://img.shields.io/github/languages/count/isLinXu/hugging-downloader)  ![GitHub last commit](https://img.shields.io/github/last-commit/isLinXu/hugging-downloader) ![GitHub](https://img.shields.io/github/license/isLinXu/hugging-downloader.svg?style=flat-square)![img](https://hits.dwyl.com/isLinXu/hugging-downloader.svg)
 
 # Installation
 
