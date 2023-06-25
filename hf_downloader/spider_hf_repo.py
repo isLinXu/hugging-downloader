@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from tqdm import tqdm
+import hf_downloader.profiles
 
 import json
 import os
@@ -52,12 +53,11 @@ def get_hf_repo_dict(url_template="https://huggingface.co/models?p={}&sort=downl
     for (key, value) in model_dict.items():
         print('"'+key+'"' + ':' + '"'+value+'"', end=",\n")
         modeling_dict[key] = value
-    # 将字典保存为 JSON 文件
-    with open("models.json", "w") as json_file:
+    with open("models_all.json", "w") as json_file:
         json.dump(modeling_dict, json_file)
     return model_dict
 
 
 if __name__ == '__main__':
     get_hf_repo_dict(url_template="https://huggingface.co/models?p={}&sort=downloads",
-                     pages=100)
+                     pages=6446)
