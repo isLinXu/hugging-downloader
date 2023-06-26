@@ -35,8 +35,6 @@ python hf_downloader/huggingface_download.py --repo-id prajjwal1/bert-tiny --cac
 
 <div style="text-align:center;">   <img src="https://user-images.githubusercontent.com/59380685/247585900-15fc44d4-8835-412b-9f11-2cc10b650a69.png" alt="image" style="max-width:60%;max-height:100%;" /> </div>
 
-<div style="text-align:center;">   <img src="https://user-images.githubusercontent.com/59380685/247585984-6b984dc3-8b98-4018-9a2a-175b348d5fc7.png" alt="image" style="max-width:20%;max-height:20%;" /> </div>
-
 ## Download models use git ifs
 
 ```shell
