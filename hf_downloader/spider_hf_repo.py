@@ -58,7 +58,7 @@ def get_hf_repo_dict(url_template="https://huggingface.co/models?p={}&sort=downl
     for (key, value) in model_dict.items():
         print('"'+key+'"' + ':' + '"'+value+'"', end=",\n")
         modeling_dict[key] = value
-    with open("models_all.json", "w") as json_file:
+    with open("../download/models_all.json", "w") as json_file:
         json.dump(modeling_dict, json_file)
     return model_dict
 
