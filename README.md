@@ -14,6 +14,23 @@ or
 pip install git+https://github.com/huggingface/transformers
 ```
 
+# VPN configuration
+
+```
+cd ./hf_downloader/profiles/
+```
+修改__init__.py中的vpn配置，配置格式如下，其中34789为vpn的本地代理端口，
+```python
+import os
+
+os.environ["http_proxy"] = "http://127.0.0.1:34789"
+os.environ["https_proxy"] = "http://127.0.0.1:34789"
+```
+另一种方式是，在命令行中配置环境变量
+```shell
+export https_proxy=http://127.0.0.1:34789;export http_proxy=http://127.0.0.1:34789;export all_proxy=socks5://127.0.0.1:34789
+```
+
 # Usage:
 
 ## spider and request model from huggingface
@@ -34,6 +51,12 @@ python hf_downloader/huggingface_download.py --repo-id prajjwal1/bert-tiny --cac
 ```
 
 <div style="text-align:center;">   <img src="https://user-images.githubusercontent.com/59380685/247585900-15fc44d4-8835-412b-9f11-2cc10b650a69.png" alt="image" style="max-width:60%;max-height:100%;" /> </div>
+
+### example
+
+```shell
+python hf_downloader/huggingface_download.py --repo-id prajjwal1/bert-tiny --cache-dir ../cache --local-dir ../bert-tiny
+```
 
 ## Download models use git ifs
 
